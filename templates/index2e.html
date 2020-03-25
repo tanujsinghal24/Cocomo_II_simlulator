@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>COCOMO II SIM</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../static/images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="../static/files/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/fonts/iconic/css/material-design-iconic-font.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/files/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/files/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/main.css">
+</head>
+<body>
+	<div><h3 class="text-primary text-center">Calculated UFP= {{result}}</h3></div>
+	<br>
+		<div><h3 class="text-success text-center">Calculated Fp= {{fp}}</h3></div>
+	<form action="{{url_for('index3')}}" method="POST">
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form">
+				<span class="contact100-form-title">
+				Fp MODULE
+				</span>
+                <!-- <div>{{result}}</div> -->
+				<div class="wrap-input100  bg1" data-validate="Please Type Your Name">
+					<span class="label-input100">Estimated cost per month in Dollars</span>
+					<input class="input100" type="number" name="cost_per_month" placeholder="cost per month">
+				</div>
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Required Software Reliability</span>
+					<div>
+						<select class="js-select2" name="Required Software Reliability">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Size of Application Database</span>
+					<div>
+						<select class="js-select2" name="Size of Application Database">
+							<option selected>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Complexity of The Product</span>
+					<div>
+						<select class="js-select2" name="Complexity of The Product">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Runtime Performance Constraints</span>
+					<div>
+						<select class="js-select2" name="Runtime Performance Constraints">
+							<option selected>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Memory Constraints</span>
+					<div>
+						<select class="js-select2" name="Memory Constraints">
+							<option selected>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Volatility of the virtual machine environment</span>
+					<div>
+						<select class="js-select2" name="Volatility of the virtual machine environment">
+							<option selected>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Required turnabout time</span>
+					<div>
+						<select class="js-select2" name="Required turnabout time">
+							<option selected>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Analyst capability</span>
+					<div>
+						<select class="js-select2" name="Analyst capability">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Applications experience</span>
+					<div>
+						<select class="js-select2" name="Applications experience">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Software engineer capability</span>
+					<div>
+						<select class="js-select2" name="Software engineer capability">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Virtual machine experience</span>
+					<div>
+						<select class="js-select2" name="Virtual machine experience">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Programming language experience</span>
+					<div>
+						<select class="js-select2" name="Programming language experience">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Application of software engineering methods</span>
+					<div>
+						<select class="js-select2" name="Application of software engineering methods">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Use of software tools</span>
+					<div>
+						<select class="js-select2" name="Use of software tools">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div><div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Required development schedule</span>
+					<div>
+						<select class="js-select2" name="Required development schedule">
+							<option selected>VERY LOW</option>
+							<option>LOW</option>
+							<option>NOMINAL</option>
+							<option>HIGH</option>
+							<option>VERY HIGH</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+				<div class="wrap-input100 input100-select bg1">
+					<span class="label-input100">Project type</span>
+					<div>
+						<select class="js-select2" name="project_type">
+							<option>choose:</option>
+							<option selected>organic</option>
+							<option>semi detached</option>
+							<option>Embedded</option>
+						</select>
+						<div class="dropDownSelect2"></div>
+					</div>
+				</div>
+				<div class="w-full dis-none js-show-service">
+					<div class="wrap-contact100-form-radio">
+						<div class="contact100-form-radio m-t-15">
+						</div>
+					</div>
+				</div>
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						<span>
+							Submit
+							<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</form>
+<br>	<br>	
+<div class="container-contact100-form-btn">
+<a href="{{url_for('index')}}"><button class="contact100-form-btn">
+	<span>
+		Reset
+		<i class="fa fa-long-arrow-right"></i>
+	</span>
+</button>
+</a></div>
+
+
+<script src="../static/files/jquery/jquery-3.2.1.min.js"></script>
+<script src="../static/files/bootstrap/js/popper.js"></script>
+<script src="../static/files/bootstrap/js/bootstrap.min.js"></script>
+<script src="../static/files/select2/select2.min.js"></script>
+<script>
+	$(".js-select2").each(function(){
+		$(this).select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $(this).next('.dropDownSelect2')
+		});
+
+
+		$(".js-select2").each(function(){
+			$(this).on('select2:close', function (e){
+				if($(this).val() == "Please chooses") {
+					$('.js-show-service').slideUp();
+				}
+				else {
+					$('.js-show-service').slideUp();
+				}
+			});
+		});
+	})
+</script>
+<script src="../static/files/daterangepicker/moment.min.js"></script>
+<script src="../static/files/daterangepicker/daterangepicker.js"></script>
+<script src="../static/files/countdowntime/countdowntime.js"></script>
+<script>
+	var filterBar = document.getElementById('filter-bar');
+</script>
+<script src="../static/js/main.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'UA-23581568-13');
+</script>
+
+</body>
+</html>
